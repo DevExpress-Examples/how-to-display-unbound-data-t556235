@@ -5,9 +5,9 @@ Public NotInheritable Class MainPage
     Public Sub New()
         Me.InitializeComponent()
         grid.ItemsSource = New ProductList()
-        grid.TotalSummary.Add(SummaryItemType.Count, "ProductName")
-        grid.TotalSummary.Add(SummaryItemType.Max, "UnitPrice").DisplayFormat = "Max: {0:c2}"
-        grid.TotalSummary.Add(SummaryItemType.Average, "UnitPrice").DisplayFormat = "Avg: {0:c2}"
+        grid.TotalSummary.AddItem(SummaryItemType.Count, "ProductName")
+        grid.TotalSummary.AddItem(SummaryItemType.Max, "UnitPrice").DisplayFormat = "Max: {0:c2}"
+        grid.TotalSummary.AddItem(SummaryItemType.Average, "UnitPrice").DisplayFormat = "Avg: {0:c2}"
     End Sub
 
     Private Sub grid_CustomUnboundColumnData(ByVal sender As Object, ByVal e As DevExpress.UI.Xaml.Grid.GridColumnDataEventArgs)

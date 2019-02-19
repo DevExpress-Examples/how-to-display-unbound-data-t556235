@@ -9,9 +9,9 @@ namespace Unbound_Columns {
         public MainPage() {
             this.InitializeComponent();
             grid.ItemsSource = new ProductList();
-            grid.TotalSummary.Add(SummaryItemType.Count, "ProductName");
-            grid.TotalSummary.Add(SummaryItemType.Max, "UnitPrice").DisplayFormat = "Max: {0:c2}";
-            grid.TotalSummary.Add(SummaryItemType.Average, "UnitPrice").DisplayFormat = "Avg: {0:c2}";
+            grid.TotalSummary.AddItem(SummaryItemType.Count, "ProductName");
+            grid.TotalSummary.AddItem(SummaryItemType.Max, "UnitPrice").DisplayFormat = "Max: {0:c2}";
+            grid.TotalSummary.AddItem(SummaryItemType.Average, "UnitPrice").DisplayFormat = "Avg: {0:c2}";
         }
 
         private void grid_CustomUnboundColumnData(object sender, DevExpress.UI.Xaml.Grid.GridColumnDataEventArgs e) {

@@ -8,7 +8,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid:GridControl Name="grid" AutoGenerateColumns="False" CustomUnboundColumnData="grid_CustomUnboundColumnData" ShowTotalSummary="True" >
+        <Grid:GridControl Name="grid" AutoGenerateColumns="False" 
+                          CustomUnboundColumnData="grid_CustomUnboundColumnData" 
+                          ShowTotalSummary="True" >
             <Grid:GridControl.Columns>
                 <Grid:GridTextColumn FieldName="ProductName" />
                 <Grid:GridTextColumn FieldName="UnitPrice"/>
